@@ -1,0 +1,59 @@
+﻿@{
+    
+    ViewData["Title"] = "Play Games";
+ }
+ <br/>
+<h1>Number Guessing Game</h1>
+<h3>Enter number between 1 TO 9 and Try Your Luck</h3>
+<input id="guessingnumber">
+<button id="checkbtn" onclick="check()">Check</button>
+<button id="refreshbtn" onclick="refresh()">RePlay Game</button>
+<p id="result">You are Wrong/Right</p>
+<p id="score">Score:10</p>
+<script>
+    var guessnumber= document.getElementById("guessingnumber")
+    var result=document.getElementById("result")
+    var score=document.getElementById("score")
+    var checkbtn = document.getElementById("checkbtn")
+    var refreshbtn = document.getElementById("refreshbtn")
+    var randomnumber= Math.floor(Math.random()*10)+1
+    var totalscore=10
+    
+    function check()
+    {
+        //var randomnumber= Math.floor(Math.random()*10)+1
+        var EN=guessnumber.value
+        refreshbtn.style.display="none"
+       
+        if(randomnumber==EN)
+        {
+            result.textContent="Right..."
+            alert("Yay... Your guess is correct and your score is "+totalscore)
+            //totalscore=totalscore+1
+            //score.textContent = "Score: "+totalscore
+            checkbtn.style.display="none"
+            guessnumber.style.display="none"
+            refreshbtn.style.display="block"
+              
+        }
+        
+        else{
+            totalscore=totalscore-1
+            score.textContent = "Score: "+totalscore
+            result.textContent="Wrong...."
+            guessnumber.value="";
+        }
+        
+
+        
+    }
+
+     refreshbtn.addEventListener("click",function(){
+            location.reload()
+    })
+
+    
+
+</script>
+
+

@@ -1,0 +1,46 @@
+﻿@model DotNet5Crud.Models.Student
+
+@{
+    ViewData["Title"] = "Create Book";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>The BOOKS</h1>
+    </div>
+    <div class="container1"></div>
+    <div class="book-container">
+        <h2>Rich Dad Poor Dad</h2>
+        <h5>Robert</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nulla cumque ex a esse. Explicabo harum aliquid, est aut voluptas consequatur eligendi magnam adipisci vero repellat quas non quia incidunt.</p>
+        <button onclick="deleteitem(event)">Delete</button>
+        </p>
+    </div>
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="book title" id="book-title-input"><br>
+            <input type="text" placeholder="book author" id="book-author-input"><br>
+            <textarea placeholder="Book Description" id="book-description-input"></textarea><br>
+            <button id="add-book">ADD</button>
+            <button id="cancel-popup">CANCEL</button>
+        </form>
+    </div>
+    <button class="add-button" id="add-popup-button">+</button>
+
+    <script src="~/js/script.js"></script>
+</body>
+</html>

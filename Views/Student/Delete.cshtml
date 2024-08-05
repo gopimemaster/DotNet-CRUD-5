@@ -1,0 +1,58 @@
+﻿@model DotNet5Crud.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Deleting Student</h2>
+
+<h3>Would you like to continue?</h3>
+<div class="container p-3 my-3 border">
+    <hr />
+        <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JoiningDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JoiningDate)
+        </dd>
+        </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="StudentId" />
+                <input class="btn btn-primary" type="submit" value="Yes" />
+                <a class="btn btn-danger" asp-action="Index">No</a>
+            </form>
+
+ </div>
